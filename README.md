@@ -1,13 +1,4 @@
-import os, zipfile, textwrap, shutil
 
-root = "/mnt/data/betel-leaf-google-ready"
-if os.path.exists(root):
-    shutil.rmtree(root)
-for folder in ["src", "tests", "assets", "models", "notebooks", ".github/workflows"]:
-    os.makedirs(os.path.join(root, folder), exist_ok=True)
-
-content_map = {
-"README.md": r'''<div align="center">
 
 # Betel Leaf Disease Classification
 
